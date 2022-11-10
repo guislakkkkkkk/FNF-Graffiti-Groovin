@@ -71,11 +71,11 @@ class MainMenuState extends MusicBeatState
 		persistentUpdate = persistentDraw = true;
 
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
-		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('skarlet_small'));
+		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('renders/skarlet_small'));
 		bg.scrollFactor.set(0, yScroll);
 		bg.setGraphicSize(Std.int(bg.width * 1.175));
 		bg.updateHitbox();
-		menuItem.x = -100;
+		bg.x = -100;
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
