@@ -129,10 +129,10 @@ class AchievementObject extends FlxSpriteGroup {
 		add(achievementText);
 		add(achievementIcon);
 
-		//var cam:Array<FlxCamera> = FlxCamera.defaultCameras;
-		//if(camera != null) {
-			//cam = [camera];
-		//}
+		var cam:Array<FlxCamera> = FlxCamera.defaultCameras;
+		if(camera != null) {
+			cam = [camera];
+		}
 		alpha = 0;
 		achievementBG.cameras = cam;
 		achievementName.cameras = cam;
@@ -147,6 +147,16 @@ class AchievementObject extends FlxSpriteGroup {
 					if(onFinish != null) onFinish();
 				}
 			});
+		}});
+	}
+
+	override function destroy() {
+		if(alphaTween != null) {
+			alphaTween.cancel();
+		}
+		super.destroy();
+	}
+}
 		}});
 	}
 
