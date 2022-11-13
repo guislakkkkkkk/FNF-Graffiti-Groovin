@@ -110,7 +110,7 @@ class MainMenuState extends MusicBeatState
 			var menuItem:FlxSprite = new FlxSprite(0, (i * 70)  + offset);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/' + optionShit[i]);
+			menuItem.frames = Paths.getSparrowAtlas('mainmenu/story' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
@@ -125,87 +125,25 @@ class MainMenuState extends MusicBeatState
 			menuItem.updateHitbox();
 
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-<<<<<<< HEAD
 			var menuItem1:FlxSprite = new FlxSprite(0, (i * 80)  + offset);
 			menuItem1.scale.x = scale;
 			menuItem1.scale.y = scale;
-			menuItem1.frames = Paths.getSparrowAtlas('mainmenu/f' + optionShit[i]);
+			menuItem1.frames = Paths.getSparrowAtlas('mainmenu/freeplay' + optionShit[i]);
 			menuItem1.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem1.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem1.animation.play('idle');
 			menuItem1.ID = i;
 			menuItem1.x = 140;
-=======
+
 			var menuItem:FlxSprite = new FlxSprite(0, (i * 80)  + offset);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/' + optionShit[i]);
+			menuItem.frames = Paths.getSparrowAtlas('mainmenu/options' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
 			menuItem.x = 140;
->>>>>>> beb53628e647cb1b8f59b3d7c0685e379c2a8cb9
-			menuItems.add(menuItem);
-			var scr:Float = (optionShit.length - 4) * 0.135;
-			if(optionShit.length < 6) scr = 0;
-			menuItem.scrollFactor.set(0, scr);
-			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
-			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
-			menuItem.updateHitbox();
-
-			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-<<<<<<< HEAD
-			var menuItem2:FlxSprite = new FlxSprite(0, (i * 90)  + offset);
-			menuItem2.scale.x = scale;
-			menuItem2.scale.y = scale;
-			menuItem2.frames = Paths.getSparrowAtlas('mainmenu/o' + optionShit[i]);
-			menuItem2.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem2.animation.addByPrefix('selected', optionShit[i] + " white", 24);
-			menuItem2.animation.play('idle');
-			menuItem2.ID = i;
-			menuItem2.x = 140;
-=======
-			var menuItem:FlxSprite = new FlxSprite(0, (i * 90)  + offset);
-			menuItem.scale.x = scale;
-			menuItem.scale.y = scale;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/' + optionShit[i]);
-			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
-			menuItem.animation.play('idle');
-			menuItem.ID = i;
-			menuItem.x = 140;
->>>>>>> beb53628e647cb1b8f59b3d7c0685e379c2a8cb9
-			menuItems.add(menuItem);
-			var scr:Float = (optionShit.length - 4) * 0.135;
-			if(optionShit.length < 6) scr = 0;
-			menuItem.scrollFactor.set(0, scr);
-			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
-			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
-			menuItem.updateHitbox();
-
-			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-<<<<<<< HEAD
-			var menuItem3:FlxSprite = new FlxSprite(0, (i * 100)  + offset);
-			menuItem3.scale.x = scale;
-			menuItem3.scale.y = scale;
-			menuItem3.frames = Paths.getSparrowAtlas('mainmenu/c' + optionShit[i]);
-			menuItem3.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem3.animation.addByPrefix('selected', optionShit[i] + " white", 24);
-			menuItem3.animation.play('idle');
-			menuItem3.ID = i;
-			menuItem3.x = 140;
-=======
-			var menuItem:FlxSprite = new FlxSprite(0, (i * 100)  + offset);
-			menuItem.scale.x = scale;
-			menuItem.scale.y = scale;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/' + optionShit[i]);
-			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
-			menuItem.animation.play('idle');
-			menuItem.ID = i;
-			menuItem.x = 140;
->>>>>>> beb53628e647cb1b8f59b3d7c0685e379c2a8cb9
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
