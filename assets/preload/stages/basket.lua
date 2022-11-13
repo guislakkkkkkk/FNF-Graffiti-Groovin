@@ -1,7 +1,7 @@
 function onCreate()
-	makeLuaSprite('bg', 'images/basket/city_shit', -1100, -750)
+	makeLuaSprite('bg', 'basket/city_shit', -1100, -750)
 	addLuaSprite('bg', false)
-	makeLuaSprite('court', 'images/basket/floor', -1100, -750)
+	makeLuaSprite('court', 'basket/floor', -1100, -750)
 	addLuaSprite('court', false)
 
    	makeAnimatedLuaSprite('cassette', 'cd', 500, 600)
@@ -9,26 +9,26 @@ function onCreate()
 	addLuaSprite('cassette', false)
 	
 	if songPath ~= 'philly-nice' then --Pico & Nene
-		makeAnimatedLuaSprite('fgNene', 'images/basket/nene', -600, 660)
+		makeAnimatedLuaSprite('fgNene', 'basket/nene', -600, 660)
 		setScrollFactor('fgNene', 1.6, 1.2);
 		addAnimationByPrefix('fgNene', 'bop', 'nene bop', 24, false);
 		scaleObject('fgNene', 1.6, 1.6);
 		addLuaSprite('fgNene', true);
 		
-		makeAnimatedLuaSprite('fgOther', 'images/basket/pico', 1500, 600)
+		makeAnimatedLuaSprite('fgOther', 'basket/pico', 1500, 600)
 		setScrollFactor('fgOther', 1.9, 1.2);
 		addAnimationByPrefix('fgOther', 'bop', 'pico bop', 24, false);
 		scaleObject('fgOther', 1.6, 1.6);
 		addLuaSprite('fgOther', true);
 	else --Darnell & Nene on bg
-		makeAnimatedLuaSprite('fgNene', 'images/basket/nene', 1500, 640)
+		makeAnimatedLuaSprite('fgNene', 'basket/nene', 1500, 640)
 		setScrollFactor('fgNene', 1.9, 1.2);
 		addAnimationByPrefix('fgNene', 'bop', 'nene bop', 24, false);
 		scaleObject('fgNene', 1.6, 1.6);
 		addLuaSprite('fgNene', true);
 		setProperty('fgNene.flipX', true)
 		
-		makeAnimatedLuaSprite('fgOther', 'images/basket/darnell', -600, 600)
+		makeAnimatedLuaSprite('fgOther', 'basket/darnell', -600, 600)
 		setScrollFactor('fgOther', 1.7, 1.2);
 		addAnimationByPrefix('fgOther', 'bop', 'darnell bop', 24, false);
 		scaleObject('fgOther', 1.6, 1.6);

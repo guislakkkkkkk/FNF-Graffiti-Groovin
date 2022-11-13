@@ -19,26 +19,26 @@ function onCreate()
 
 
 		//streetstyle
-		var sky = new BGSprite('images/outside/sky', 'philly', -382, -404, 0.95, 0.95, ["sky"], true);
+		var sky = new BGSprite('outside/sky', 'philly', -382, -404, 0.95, 0.95, ["sky"], true);
 		sky.scale.set(1.15, 1.15);
 		sky.updateHitbox();
 		sky.antialiasing = ClientPrefs.globalAntialiasing;
 		add(sky);
 
-		var farbuildings = new FlxBackdrop(Paths.image('images/outside/far buildings', 'philly'), 1, 1, true, false);
+		var farbuildings = new FlxBackdrop(Paths.image('outside/far buildings', 'philly'), 1, 1, true, false);
 		farbuildings.y = -504;
 		farbuildings.velocity.x -= 800;
 		farbuildings.antialiasing = ClientPrefs.globalAntialiasing;
 		add(farbuildings);
 
-		var buildings = new FlxBackdrop(Paths.image('images/outside/buildings', 'philly'), 1, 1, true, false);
+		var buildings = new FlxBackdrop(Paths.image('outside/buildings', 'philly'), 1, 1, true, false);
 		buildings.x = -1137;
 		buildings.y = -334;
 		buildings.velocity.x -= 2250;
 		buildings.antialiasing = ClientPrefs.globalAntialiasing;
 		add(buildings);
 
-		var darkbuildings = new FlxBackdrop(Paths.image('images/outside/buildings darker', 'philly'), 1, 1, true, false);
+		var darkbuildings = new FlxBackdrop(Paths.image('outside/buildings darker', 'philly'), 1, 1, true, false);
 		darkbuildings.x = 500;
 		darkbuildings.y = -250;
 		darkbuildings.velocity.x -= 2500;
@@ -49,25 +49,25 @@ function onCreate()
 		stage_back.antialiasing = ClientPrefs.globalAntialiasing;
 		add(stage_back);
 
-		var poles = new FlxBackdrop(Paths.image('images/outside/poles', 'philly'), 1, 1, true, false);
+		var poles = new FlxBackdrop(Paths.image('outside/poles', 'philly'), 1, 1, true, false);
 		poles.y = 444;
 		poles.velocity.x -= 3000;
 		poles.antialiasing = ClientPrefs.globalAntialiasing;
 		add(poles);
 
-		var tricky_ad = new BGSprite('images/outside/ad_tricky', 'philly', 3500, 234);
+		var tricky_ad = new BGSprite('outside/ad_tricky', 'philly', 3500, 234);
 		tricky_ad.antialiasing = ClientPrefs.globalAntialiasing;
 		add(tricky_ad);
 		setVar("ad", tricky_ad);
 
-		var train = new BGSprite('images/outside/train', 'philly', -343, 542, 1, 1);
+		var train = new BGSprite('outside/train', 'philly', -343, 542, 1, 1);
 		train.antialiasing = ClientPrefs.globalAntialiasing;
 		add(train);
 
 
 		//streetstyle
 		var wallX = 343;
-		var tunnelWall = new BGSprite('images/tunnel/walls', 'philly', wallX, -320, 1, 0.6);
+		var tunnelWall = new BGSprite('tunnel/walls', 'philly', wallX, -320, 1, 0.6);
 		tunnelWall.active = true;
 		tunnelWall.scale.set(1.1, 1.1);
 		tunnelWall.updateHitbox();
@@ -76,7 +76,7 @@ function onCreate()
 		add(tunnelWall);
 		tunnelWall.visible = false;
 
-		var tunnelWall2 = new BGSprite('images/tunnel/walls', 'philly', wallX + tunnelWall.width - 2, -320, 1, 0.6);
+		var tunnelWall2 = new BGSprite('tunnel/walls', 'philly', wallX + tunnelWall.width - 2, -320, 1, 0.6);
 		tunnelWall2.active = true;
 		tunnelWall2.scale.set(1.1, 1.1);
 		tunnelWall2.updateHitbox();
@@ -86,13 +86,13 @@ function onCreate()
 		setVar("tunnelWall2", tunnelWall2);
 		tunnelWall2.visible = false;
 
-		var tunnelTrain = new BGSprite('images/tunnel/train shaded', 'philly', -343, 542, 1, 1);
+		var tunnelTrain = new BGSprite('tunnel/train shaded', 'philly', -343, 542, 1, 1);
 		tunnelTrain.antialiasing = ClientPrefs.globalAntialiasing;
 		setVar("tunnelTrain", tunnelTrain);
 		add(tunnelTrain);
 		tunnelTrain.visible = false;
 
-		var tunnelTrans = new BGSprite('images/tunnel/wall', 'philly', wallX, -320, 0, 0);
+		var tunnelTrans = new BGSprite('tunnel/wall', 'philly', wallX, -320, 0, 0);
 		tunnelTrans.active = true;
 		tunnelTrans.velocity.x -= 12000;
 		game.add(tunnelTrans);
@@ -100,7 +100,7 @@ function onCreate()
 		tunnelTrans.visible = false;
 	]])
 
-	makeAnimatedLuaSprite('dropBg', 'images/tunnel/drop_bg', -900, -350);
+	makeAnimatedLuaSprite('dropBg', 'tunnel/drop_bg', -900, -350);
 	scaleObject('dropBg', 1.9, 1.9);
 	addAnimationByPrefix('dropBg', 'idle', 'tunnel loop', 24, true);
 	setScrollFactor('dropBg', 0.75, 0.75);

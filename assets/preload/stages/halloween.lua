@@ -1,5 +1,5 @@
 function onCreate()
-	makeAnimatedLuaSprite('bg', 'images/halloween/BG', -800, -332);
+	makeAnimatedLuaSprite('bg', 'halloween/BG', -800, -332);
 	addAnimationByPrefix('bg', 'idle', 'bg0', 24, true);
 	addAnimationByPrefix('bg', 'lighting', 'bg_lightning', 24, false);
 	scaleObject('bg', 2, 2);
