@@ -110,7 +110,7 @@ class MainMenuState extends MusicBeatState
 			var menuItem:FlxSprite = new FlxSprite(0, (i * 70)  + offset);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/story' + optionShit[i]);
+			menuItem.frames = Paths.getSparrowAtlas('mainmenu/' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
@@ -128,7 +128,7 @@ class MainMenuState extends MusicBeatState
 			var menuItem1:FlxSprite = new FlxSprite(0, (i * 80)  + offset);
 			menuItem1.scale.x = scale;
 			menuItem1.scale.y = scale;
-			menuItem1.frames = Paths.getSparrowAtlas('mainmenu/freeplay' + optionShit[i]);
+			menuItem1.frames = Paths.getSparrowAtlas('mainmenu/' + optionShit[i]);
 			menuItem1.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem1.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem1.animation.play('idle');
@@ -138,7 +138,7 @@ class MainMenuState extends MusicBeatState
 			var menuItem:FlxSprite = new FlxSprite(0, (i * 80)  + offset);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/options' + optionShit[i]);
+			menuItem.frames = Paths.getSparrowAtlas('mainmenu/' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
