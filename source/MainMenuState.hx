@@ -123,34 +123,6 @@ class MainMenuState extends MusicBeatState
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
 			menuItem.updateHitbox();
-
-			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem1:FlxSprite = new FlxSprite(0, (i * 80)  + offset);
-			menuItem1.scale.x = scale;
-			menuItem1.scale.y = scale;
-			menuItem1.frames = Paths.getSparrowAtlas('mainmenu/' + optionShit[i]);
-			menuItem1.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem1.animation.addByPrefix('selected', optionShit[i] + " white", 24);
-			menuItem1.animation.play('idle');
-			menuItem1.ID = i;
-			menuItem1.x = 140;
-
-			var menuItem:FlxSprite = new FlxSprite(0, (i * 80)  + offset);
-			menuItem.scale.x = scale;
-			menuItem.scale.y = scale;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/' + optionShit[i]);
-			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
-			menuItem.animation.play('idle');
-			menuItem.ID = i;
-			menuItem.x = 140;
-			menuItems.add(menuItem);
-			var scr:Float = (optionShit.length - 4) * 0.135;
-			if(optionShit.length < 6) scr = 0;
-			menuItem.scrollFactor.set(0, scr);
-			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
-			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
-			menuItem.updateHitbox();
 		}
 		FlxG.camera.follow(camFollowPos, null, 1);
 
